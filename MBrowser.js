@@ -25,7 +25,7 @@ var navs2 = [
                 ["Photos","photo"],
                 ["Videos","movie"]
             ];
-            var steps = [ "Carmen Villalobos", 'Jenna Von Oy', "Rachel Hunter","Carmen Electra","Halle Berry", "Altair Jarabo", "Erika Eleniak" ];
+            var steps = [ "Carmen Villalobos", 'Jenna Von Oy', "Rachel Hunter","Carmen Electra","Halle Berry", "Altair Jarabo", "Erika Eleniak", "Molly Gordon", "Emily Bett Rickards", "Ariana James"];
 
             var img1 = "Img/Carmen-Villalobos-427x640.jpg";//Img/Screenshot_20231006_185215_YouTube.jpg";
        
@@ -35,10 +35,12 @@ var navs2 = [
             var img5 = "Img/Halle-Berry-300x400.jpg";
 var img6 = "Img/Altair-Jarabo-300x400.jpg";
 var img7 = "Img/Screenshot_20231006_202749.jpg";
+var img8 = "Img/Molly-Gordon.jpg";
+var img9 ="Img/3c31d352152fa7c0d34f470acedfcaad.jpg";
 //https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80"
-
+var img10 ="Misc/ariana-2051940105800481507.webp";
             // add stepper with mobile
-            this.stepper = ui.addStepper( this.main, steps, "mobile,autoswipe,fraction", 0.96, 0.84 );
+            this.stepper = ui.addStepper( this.main, steps, "mobile,autoswipe,dots,alternativelabel,loop", 0.96, 0.84 );
             this.stepper.animate("bounceInUp", 1950);
 this.stepper.setMargins(2,2,2,2,"px");
 this.stepper.setCornerRadius(2,2,2,2,"px");
@@ -80,6 +82,22 @@ this.lay7= this.stepper.getLayout( 6)
 
                 // add an image control to the third layout
                 ui.addImage( this.lay7, img7, "Button", 1 )
+
+
+this.lay8= this.stepper.getLayout( 7)
+
+                // add an image control to the third layout
+                ui.addImage( this.lay8, img8, "Button", 1 )
+
+this.lay9= this.stepper.getLayout( 8)
+
+                // add an image control to the third layout
+                ui.addImage( this.lay9, img9, "Button", 1 )
+
+this.lay10= this.stepper.getLayout( 9)
+
+                // add an image control to the third layout
+                ui.addImage( this.lay10, img10, "Button", 1 )
 
             // Creates a BottomNavbar Component and add it to the TreeView
             this.bmn = ui.addBottomNavbar( this.main, navs2, "Primary", 1 )
